@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Rounded in Rounded</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .rounded {
+      height: 360px;
+      width: 240px;
+      margin: auto;
+      position: relative;
+      border: 4px solid #aabbcc;
+      border-radius: 8px;
+    }
+
+    .rounded__item {
+      height: 120px;
+      width: 240px;
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      background: #999;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="rounded">
+    <div class="rounded__item"></div>
+  </div>
+
+</body>
+
+</html>
