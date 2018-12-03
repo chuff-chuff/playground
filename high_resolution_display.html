@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>高解像度ディスプレイ対応</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 320px;
+      margin: 2rem auto;
+    }
+
+    figure+figure {
+      margin-top: 1rem;
+    }
+
+    img {
+      width: 320px;
+    }
+
+    figcaption {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <figure>
+      <img src="img/cat-img-320x200.jpg" alt="解像度320x200の猫の画像">
+      <figcaption>320x200</figcaption>
+    </figure>
+
+    <figure>
+      <img src="img/cat-img-640x400.jpg" alt="解像度640x400の猫の画像">
+      <figcaption>640x400</figcaption>
+    </figure>
+
+    <figure>
+      <img src="img/cat-img-960x600.jpg" alt="解像度960x600の猫の画像">
+      <figcaption>960x600</figcaption>
+    </figure>
+
+  </div>
+
+</body>
+
+</html>
