@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    section {
+      margin-top: 1rem;
+    }
+
+    h1 {
+      font-weight: normal;
+    }
+
+    p {
+      font-size: 64px;
+      font-weight: bold;
+      margin: 0;
+      background-image: -webkit-gradient(linear, left top, left bottom, from(blue), to(red));
+      background-image: linear-gradient(blue, red);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    section:nth-child(1) p {
+      color: transparent;
+    }
+
+    section:nth-child(2) p {
+      -webkit-text-fill-color: transparent
+    }
+  </style>
+</head>
+
+<body>
+
+  <section>
+    <h1>colorでのtransparent指定</h1>
+    <p>Lorem ipsum</p>
+  </section>
+
+  <section>
+    <h1>-webkit-text-fill-colorでのtransparent指定</h1>
+    <p>Lorem ipsum</p>
+  </section>
+
+</body>
+
+</html>
