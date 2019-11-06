@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ライブリージョンのサンプル</title>
+  <style>
+    section {
+      background-color: #ddd;
+      padding: 1rem;
+    }
+
+    section> :first-child {
+      margin-top: 0;
+    }
+
+    section+section {
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>ライブリージョンのサンプル</h1>
+
+  <section>
+    <h2>ライブリージョンを記述したサイコロ</h2>
+    <p>スクリーンリーダーを使用しているとサイコロを振るたびに出目が読み上げられる</p>
+    <div class="result01" role="status" aria-live="polite">ここに出目が出るよ！</div>
+    <button class="dice">サイコロを振る</button>
+  </section>
+
+
+  <section>
+    <h2>ライブリージョンを記述していないサイコロ</h2>
+    <p>スクリーンリーダーを使用しても出目が読み上げられることはない</p>
+    <div class="result02">ここに出目が出るよ！</div>
+    <button class="dice">サイコロを振る</button>
+  </section>
+
+  <script>
+    const dices = document.querySelectorAll(".dice");
+    dices.forEach((dice) => {
+      dice.addEventListener('click', () => {
+        const number = Math.ceil(Math.random() * 6);
+        dice.previousElementSibling.textContent = number;
+      })
+    });
+  </script>
+
+</body>
+
+</html>
