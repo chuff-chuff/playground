@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>picture要素によるアートディレクション</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      max-width: 100%;
+      vertical-align: bottom;
+    }
+
+    figure+figure {
+      margin-top: 2rem;
+    }
+
+    figcaption {
+      padding: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <figure>
+    <picture>
+      <source srcset="./img/beautiful-building-for-tablet-and-sp.jpg" media="(max-width: 768px)">
+      <img src="./img/beautiful-building.jpg" alt="外国の美しい街並みの写真。奥に時計塔が見える">
+    </picture>
+    <figcaption>picture要素を使ったアートディレクション。画面幅によって画像が切り替わる</figcaption>
+  </figure>
+
+  <figure>
+    <img src="./img/beautiful-building.jpg" alt="外国の美しい街並みの写真。奥に時計塔が見える">
+    <figcaption>img要素のみによるマークアップ。画面幅が小さくなっても画像が切り替わらず、画像の主題がぼやけてしまう</figcaption>
+  </figure>
+
+</body>
+
+</html>
