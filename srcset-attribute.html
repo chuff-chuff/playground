@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>srcset属性による高解像度ディスプレイ対応</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 320px;
+      margin: 2rem auto;
+    }
+
+    img {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <img srcset="./img/moca_1x.jpg 1x, ./img/moca_2x.jpg 2x" src="./img/moca_1x.jpg" alt="モカ（猫）の写真">
+  </div>
+
+</body>
+
+</html>
