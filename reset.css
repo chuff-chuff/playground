@@ -1,0 +1,9 @@
+*,
+*::after,
+*::before {
+  all: unset;
+}
+html,
+body {
+  all: initial;
+}
