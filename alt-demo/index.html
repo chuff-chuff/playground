@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>alt属性の挙動</title>
+  <style>
+    body {
+      max-width: 800px;
+      margin: 0 auto 5rem;
+      padding: 0 1rem;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h1>alt属性の挙動</h1>
+
+  <hr>
+
+  <h2>alt属性の有無・空のalt属性とそうでない場合</h2>
+  <h3>alt属性なし</h3>
+  <img src="./img/cat.jpg" width="400">
+  <h3>空のalt属性</h3>
+  <img src="./img/cat.jpg" width="400" alt="">
+  <h3>alt属性を記述</h3>
+  <img src="./img/cat.jpg" width="400" alt="猫の写真">
+
+  <hr>
+
+  <h2>画像が読み込まれていない場合の表示</h2>
+  <h3>alt属性なし</h3>
+  <img src="./img/cat.jp" width="400">
+  <h3>空のalt属性</h3>
+  <img src="./img/cat.jp" width="400" alt="">
+  <h3>alt属性を記述</h3>
+  <img src="./img/cat.jp" width="400" alt="猫の写真">
+
+</body>
+</html>
