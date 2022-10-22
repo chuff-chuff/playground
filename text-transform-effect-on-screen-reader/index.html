@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>text-transformが読み上げに与える影響</title>
+  <style>
+    body {
+      max-width: 800px;
+      margin: 0 auto 5rem;
+      padding: 0 1rem;
+    }
+
+    code {
+      padding: 0.2em 0.4em;
+      margin: 0;
+      font-size: 85%;
+      background-color: rgba(175, 184, 193, 0.2);
+      border-radius: 6px;
+    }
+
+    .uppercase {
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+
+<body>
+  <h1><code>text-transform </code>が読み上げに与える影響</h1>
+
+  <hr>
+
+  <h2><code>lang="ja"</code></h2>
+  <h3>小文字</h3>
+  <ul>
+    <li>add</li>
+    <li>top</li>
+    <li>home</li>
+    <li>about</li>
+  </ul>
+
+  <h3>大文字</h3>
+  <ul>
+    <li>ADD</li>
+    <li>TOP</li>
+    <li>HOME</li>
+    <li>ABOUT</li>
+  </ul>
+
+  <h3><code>text-transform</code> で大文字</h3>
+  <ul class="uppercase">
+    <li>add</li>
+    <li>top</li>
+    <li>home</li>
+    <li>about</li>
+  </ul>
+
+  <hr>
+
+  <h2><code>lang="en"</code></h2>
+  <h3>小文字</h3>
+  <ul lang="en">
+    <li>add</li>
+    <li>top</li>
+    <li>home</li>
+    <li>about</li>
+  </ul>
+
+  <h3>大文字</h3>
+  <ul lang="en">
+    <li>ADD</li>
+    <li>TOP</li>
+    <li>HOME</li>
+    <li>ABOUT</li>
+  </ul>
+
+  <h3><code>text-transform</code> で大文字</h3>
+  <ul class="uppercase" lang="en">
+    <li>add</li>
+    <li>top</li>
+    <li>home</li>
+    <li>about</li>
+  </ul>
+
+  <hr>
+
+  <h2>文章で検証</h2>
+
+  <h3><code>lang="ja"</code></h3>
+  <h4>小文字</h4>
+  <p>You need to add more sugar.</p>
+  <h4>大文字</h4>
+  <p>You need to ADD more sugar.</p>
+  <h4><code>text-transform</code> で大文字</h4>
+  <p>You need to <span class="uppercase">add</span> more sugar.</p>
+
+
+  <h3><code>lang="en"</code></h3>
+  <h4>小文字</h4>
+  <p lang="en">You need to add more sugar.</p>
+  <h4>大文字</h4>
+  <p lang="en">You need to ADD more sugar.</p>
+  <h4><code>text-transform</code> で大文字</h4>
+  <p lang="en">You need to <span class="uppercase">add</span> more sugar.</p>
+
+
+</body>
+
+</html>
