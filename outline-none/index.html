@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>フォーカスインジケーターが見えないとどうなるか</title>
+  <style>
+    .outline-none a {
+      outline: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <ul class="outline-none">
+    <li><a href="https://example.com/">リンク1</a></li>
+    <li><a href="https://example.com/">リンク2</a></li>
+    <li><a href="https://example.com/">リンク3</a></li>
+  </ul>
+
+  <button>フォーカスインジケーターを表示</button>
+
+  <script>
+    const button = document.querySelector('button')
+    const target = document.querySelector('ul')
+
+    button.addEventListener('click', () => {
+      document.querySelector('ul').classList.toggle('outline-none')
+    })
+  </script>
+</body>
+
+</html>
